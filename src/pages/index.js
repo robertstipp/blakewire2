@@ -1,5 +1,13 @@
 import React from "react"
+import { Layout, Hero, Services } from "../components"
 
-export default function Home() {
-  return <div>Hello world!</div>
+const HomePage = () => {
+  return (
+    <Layout>
+      <Hero />
+      <Services />
+    </Layout>
+  )
 }
+
+export default HomePage
