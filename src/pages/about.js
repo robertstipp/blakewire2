@@ -26,6 +26,7 @@ const Wrapper = styled.main`
   padding: 2rem 0;
   margin: 0 auto;
   .label {
+    padding-bottom: 0.2rem;
     color: var(--clr-primary-2);
     border-bottom: solid black 1px;
   }
