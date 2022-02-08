@@ -3,9 +3,17 @@ import styled from "styled-components"
 import { MdClose } from "react-icons/md"
 import { Link } from "gatsby"
 import { GatsbyContext } from "../context/context"
-
+import sidebarlinks from "../contstants/sidebarlinks"
 const Sidebar = () => {
   const { links, hideSidebar } = useContext(GatsbyContext)
+
+  // const tempLinks = [
+  //   ...new Set(
+  //     links.map(link => {
+  //       return link.page
+  //     })
+  //   ),
+  // ]
 
   return (
     <Wrapper>
@@ -13,16 +21,18 @@ const Sidebar = () => {
         <button onClick={hideSidebar}>
           <MdClose className="icon" />
         </button>
-        <div className="links">
-          {links.map((link, index) => {
-            const { url, label } = link
+        {/* <div className="links">
+          {tempLinks.map((page, index) => {
+            const { url, label, icon } = page
+            console.log(page)
             return (
-              <Link to={url} key={index} onClick={hideSidebar}>
-                {label}
+              <Link to={url} key={index}>
+                {page}
               </Link>
             )
           })}
-        </div>
+        </div> */}
+        <div className="link">{sidebarlinks.map(link => {})}</div>
       </div>
     </Wrapper>
   )

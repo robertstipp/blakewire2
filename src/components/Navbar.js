@@ -3,11 +3,19 @@ import styled from "styled-components"
 import logo from "../images/logo.png"
 import { Link } from "gatsby"
 import { GoThreeBars } from "react-icons/go"
-
+import NavLink from "./NavLink"
 import { GatsbyContext } from "../context/context"
 
 const Navbar = () => {
   const { isSidebarOpen, showSidebar, links } = useContext(GatsbyContext)
+  const tempLinks = [
+    ...new Set(
+      links.map(link => {
+        return link.page
+      })
+    ),
+  ]
+
   return (
     <Wrapper>
       <div className="nav-center">
@@ -22,14 +30,12 @@ const Navbar = () => {
           )}
         </div>
         <ul className="nav-links">
-          {links.map(link => {
-            const { label, url } = link
-            return (
-              <Link to={url}>
-                <li>{label}</li>
-              </Link>
-            )
+          {tempLinks.map((page, index) => {
+            return <NavLink key={index} page={page} />
           })}
+          <Link to="/contact" className="contact-button">
+            Contact
+          </Link>
         </ul>
       </div>
     </Wrapper>
@@ -43,6 +49,22 @@ const Wrapper = styled.nav`
   height: 5rem;
   display: flex;
   align-items: center;
+  .contact-button {
+    color: var(--clr-white);
+    background: var(--clr-primary-7);
+    border: 1px solid var(--clr-primary-5);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    padding: 10px 20px;
+    width: 100%;
+    text-transform: capitalize;
+    position: relative;
+    border-radius: 0.2rem;
+    &:hover {
+      background-color: var(--clr-primary-5);
+    }
+  }
   .nav-center {
     width: 90vw;
     margin: 0 auto;

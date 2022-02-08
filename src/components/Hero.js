@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <Wrapper>
       <StaticImage
-        src="../images/hero.png"
+        src="../images/hero-2.png"
         layout="fullWidth"
         className="img"
         alt="hero"
@@ -15,8 +15,10 @@ const Hero = () => {
       <div className="info">
         <article>
           <h1>BLAKE WIRE</h1>
-          <h3>speciality cable for space tech</h3>
-          <h3>est. 1963</h3>
+          <h3>
+            Since, 1964, the source for wire, cable, wire management products,
+            and electronic componennts.
+          </h3>
         </article>
       </div>
     </Wrapper>

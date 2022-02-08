@@ -1,19 +1,38 @@
 import React from "react"
 export default [
   {
-    page: "home",
-    label: "home",
-    url: `/`,
-  },
-  {
     page: "about",
     label: "about",
     url: `/about`,
   },
-
+  {
+    page: "about",
+    label: "contact",
+    url: `/contact`,
+  },
+  {
+    page: "about",
+    label: "our history",
+    url: `/about`,
+  },
   {
     page: "quality",
     label: "quality",
+    url: `/quality`,
+  },
+  {
+    page: "quality",
+    label: "certifications",
+    url: `/quality`,
+  },
+  {
+    page: "quality",
+    label: "ISO",
+    url: `/quality`,
+  },
+  {
+    page: "quality",
+    label: "ASTM",
     url: `/quality`,
   },
   {
@@ -22,13 +41,28 @@ export default [
     url: `/catalog`,
   },
   {
-    page: "custom-cable",
-    label: "custom",
-    url: `/custom`,
+    page: "catalog",
+    label: "MIL Spec Wire",
+    url: `/catalog`,
   },
   {
-    page: "contact",
-    label: "contact",
-    url: `/contact`,
+    page: "catalog",
+    label: "MIL Spec Cable",
+    url: `/catalog`,
+  },
+  {
+    page: "catalog",
+    label: "Un-Insulated Buss Wire",
+    url: `/catalog`,
+  },
+  {
+    page: "catalog",
+    label: "Wire Management Products",
+    url: `/catalog`,
+  },
+  {
+    page: "custom",
+    label: "custom",
+    url: `/custom`,
   },
 ]
