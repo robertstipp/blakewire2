@@ -28,11 +28,13 @@ const Contact = () => {
 }
 
 const Wrapper = styled.main`
-  width: 90vw;
-  padding: 2rem 0;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  @media (min-width: 800px) {
+    width: 90vw;
+    padding: 2rem 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
 `
 
 export default Contact
