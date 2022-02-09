@@ -35,7 +35,11 @@ const Sidebar = () => {
         <div className="links">
           {sidebarlinks.map(link => {
             const { url, label } = link
-            return <Link to={url}>{label}</Link>
+            return (
+              <Link to={url} onClick={hideSidebar}>
+                {label}
+              </Link>
+            )
           })}
         </div>
       </div>

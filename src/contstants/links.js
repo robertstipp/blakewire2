@@ -21,21 +21,6 @@ export default [
     url: `/quality`,
   },
   {
-    page: "quality",
-    label: "certifications",
-    url: `/quality`,
-  },
-  {
-    page: "quality",
-    label: "ISO",
-    url: `/quality`,
-  },
-  {
-    page: "quality",
-    label: "ASTM",
-    url: `/quality`,
-  },
-  {
     page: "catalog",
     label: "MIL Spec Wire",
     url: `/catalog`,
