@@ -46,7 +46,6 @@ const Wrapper = styled.nav`
   position: relative;
   background: transparent;
   z-index: 1;
-  height: 5rem;
   display: flex;
   align-items: center;
   .contact-button {
@@ -128,9 +127,6 @@ const Wrapper = styled.nav`
       font-family: sans-serif;
       font-weight: bold;
       transition: var(--transition);
-      &:hover {
-        border-bottom: 1px solid black;
-      }
     }
   }
 `

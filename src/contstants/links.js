@@ -2,7 +2,7 @@ import React from "react"
 export default [
   {
     page: "about",
-    label: "about",
+    label: "about us",
     url: `/about`,
   },
   {
@@ -37,11 +37,6 @@ export default [
   },
   {
     page: "catalog",
-    label: "catalog",
-    url: `/catalog`,
-  },
-  {
-    page: "catalog",
     label: "MIL Spec Wire",
     url: `/catalog`,
   },
@@ -52,7 +47,22 @@ export default [
   },
   {
     page: "catalog",
-    label: "Un-Insulated Buss Wire",
+    label: "Coaxial Cable",
+    url: `/catalog`,
+  },
+  {
+    page: "catalog",
+    label: "Databus Cable",
+    url: `/catalog`,
+  },
+  {
+    page: "catalog",
+    label: "Cord Products",
+    url: `/catalog`,
+  },
+  {
+    page: "catalog",
+    label: "Hook-Up Wire",
     url: `/catalog`,
   },
   {
@@ -61,8 +71,13 @@ export default [
     url: `/catalog`,
   },
   {
+    page: "catalog",
+    label: "Braid",
+    url: `/catalog`,
+  },
+  {
     page: "custom",
-    label: "custom",
+    label: "custom cable",
     url: `/custom`,
   },
 ]

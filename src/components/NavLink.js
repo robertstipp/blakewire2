@@ -43,15 +43,15 @@ const Wrapper = styled.li`
   }
   .links {
     position: absolute;
-    top: 4rem;
+    top: 2rem;
     left: 50%;
     transform: translateX(-50%);
     visibility: hidden;
-    padding: 2rem;
+    padding: 1rem;
     background: var(--clr-white);
     border-radius: var(--radius);
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem 2rem;
     grid-gap: 1rem 4rem;
     a {

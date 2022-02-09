@@ -32,7 +32,12 @@ const Sidebar = () => {
             )
           })}
         </div> */}
-        <div className="link">{sidebarlinks.map(link => {})}</div>
+        <div className="links">
+          {sidebarlinks.map(link => {
+            const { url, label } = link
+            return <Link to={url}>{label}</Link>
+          })}
+        </div>
       </div>
     </Wrapper>
   )
