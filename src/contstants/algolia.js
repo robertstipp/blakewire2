@@ -2,18 +2,32 @@ const airtableQuery = `
 {
     allAirtable(filter: {table: {eq: "Catalog"}}) {
       nodes {
-        id
+        table
         data {
           Name
+          Type
+          AWG_Range
+          Insulation
+          Temperature
+          Voltage
         }
+        id
       }
     }
   }
 `
-function pageToAlgoliaRecord({ id, data: { Name } }) {
+function pageToAlgoliaRecord({
+  id,
+  data: { Name, Type, AWG_Range, Insulation, Temperature, Voltage },
+}) {
   return {
     objectID: id,
     Name,
+    Type,
+    AWG_Range,
+    Insulation,
+    Temperature,
+    Voltage,
   }
 }
 

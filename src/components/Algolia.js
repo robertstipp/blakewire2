@@ -16,11 +16,12 @@ const searchClient = algoliasearch(
 
 const NewHits = connectHits(({ hits }) => {
   return hits.map(item => {
-    const { objectID, Name } = item
+    const { objectID, Name, Type } = item
 
     return (
       <article key={objectID}>
         <h4>{Name}</h4>
+        <h2>{Type}</h2>
       </article>
     )
   })
@@ -29,7 +30,7 @@ const NewHits = connectHits(({ hits }) => {
 const Search = () => {
   return (
     <Wrapper>
-      <Title title="Algolia Search" />
+      <Title title="Catalog Search" />
       <InstantSearch
         indexName={process.env.GATSBY_ALGOLIA_INDEX_NAME}
         searchClient={searchClient}
