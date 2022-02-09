@@ -48,10 +48,11 @@ const Wrapper = styled.li`
     transform: translateX(-50%);
     visibility: hidden;
     padding: 1rem;
+    border: 1px solid black;
     background: var(--clr-white);
     border-radius: var(--radius);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem 2rem;
     grid-gap: 1rem 4rem;
     a {
