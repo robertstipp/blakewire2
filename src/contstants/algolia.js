@@ -1,6 +1,6 @@
 const airtableQuery = `
 {
-    allAirtable(filter: {table: {eq: "Catalog"}}) {
+    allAirtable(filter: {table: {eq: "ProductCatalog"}}) {
       nodes {
         table
         data {
