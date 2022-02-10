@@ -51,7 +51,12 @@ module.exports = {
           },
           {
             baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
-            tableName: `Catalog`,
+            tableName: `ProductCatalog`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `HookUpWire`,
             mapping: { image: `fileNode` },
           },
         ],

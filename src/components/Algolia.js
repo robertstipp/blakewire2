@@ -1,6 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import Title from "./Title"
+import {
+  BsFillLightningChargeFill,
+  BsThermometer,
+  BsFillShieldFill,
+  BsRulers,
+} from "react-icons/bs"
 import algoliasearch from "algoliasearch/lite"
 import {
   InstantSearch,
@@ -16,12 +22,33 @@ const searchClient = algoliasearch(
 
 const NewHits = connectHits(({ hits }) => {
   return hits.map(item => {
-    const { objectID, Name, Type } = item
+    const {
+      objectID,
+      Name,
+      Type,
+      AWG_Range,
+      Insulation,
+      Temperature,
+      Voltage,
+    } = item
 
     return (
       <article key={objectID}>
-        <h4>{Name}</h4>
-        <h2>{Type}</h2>
+        <h3>{Name}</h3>
+        <p>Type: {Type}</p>
+        <p>
+          <BsRulers /> {AWG_Range}
+        </p>
+        <p>
+          <BsFillShieldFill /> {Insulation}
+        </p>
+        <p>
+          <BsThermometer />
+          {Temperature} C
+        </p>
+        <p>
+          <BsFillLightningChargeFill /> {Voltage} Volts.
+        </p>
       </article>
     )
   })
