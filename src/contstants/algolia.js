@@ -1,33 +1,23 @@
 const airtableQuery = `
 {
-    allAirtable(filter: {table: {eq: "ProductCatalog"}}) {
+    allAirtable(filter: {table: {in: ["M22759", "M16878","M81044","M81822","MIL-DTL-17"]}})  {
       nodes {
-        table
+        id
         data {
           Name
-          Type
-          AWG_Range
-          Insulation
-          Temperature
-          Voltage
+          Description
         }
-        id
+        table
       }
     }
   }
 `
-function pageToAlgoliaRecord({
-  id,
-  data: { Name, Type, AWG_Range, Insulation, Temperature, Voltage },
-}) {
+function pageToAlgoliaRecord({ id, table, data: { Name, Description } }) {
   return {
     objectID: id,
     Name,
-    Type,
-    AWG_Range,
-    Insulation,
-    Temperature,
-    Voltage,
+    Description,
+    table,
   }
 }
 

@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Title from "./Title"
 import {
   BsFillLightningChargeFill,
@@ -22,33 +23,13 @@ const searchClient = algoliasearch(
 
 const NewHits = connectHits(({ hits }) => {
   return hits.map(item => {
-    const {
-      objectID,
-      Name,
-      Type,
-      AWG_Range,
-      Insulation,
-      Temperature,
-      Voltage,
-    } = item
+    const { objectID, Name, Description, table } = item
 
     return (
       <article key={objectID}>
-        <h3>{Name}</h3>
-        <p>Type: {Type}</p>
-        <p>
-          <BsRulers /> {AWG_Range}
-        </p>
-        <p>
-          <BsFillShieldFill /> {Insulation}
-        </p>
-        <p>
-          <BsThermometer />
-          {Temperature} C
-        </p>
-        <p>
-          <BsFillLightningChargeFill /> {Voltage} Volts.
-        </p>
+        <h4>Product Name{Name}</h4>
+        <h5>Table {table}</h5>
+        {/* <p>{Description}</p> */}
       </article>
     )
   })

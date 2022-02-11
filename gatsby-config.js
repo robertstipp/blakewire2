@@ -41,22 +41,27 @@ module.exports = {
         tables: [
           {
             baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
-            tableName: `Projects`,
+            tableName: `M81044`,
             mapping: { image: `fileNode` },
           },
           {
             baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
-            tableName: `Customers`,
+            tableName: `M22759`,
             mapping: { image: `fileNode` },
           },
           {
             baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
-            tableName: `ProductCatalog`,
+            tableName: `MIL-DTL-17`,
             mapping: { image: `fileNode` },
           },
           {
             baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
-            tableName: `HookUpWire`,
+            tableName: `M16878`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M81822`,
             mapping: { image: `fileNode` },
           },
         ],
