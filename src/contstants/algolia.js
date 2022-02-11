@@ -1,6 +1,6 @@
 const airtableQuery = `
 {
-    allAirtable(filter: {table: {in: ["M22759", "M16878","M81044","M81822","MIL-DTL-17", "Databus Cables","Un-insulated Buss Wire","Braiding"]}})  {
+    allAirtable(filter: {table: {in: ["M22759", "M16878","M81044","M81822","MIL-DTL-17", "Databus Cables","Un-insulated Buss Wire","Braiding", "Tubing"]}})  {
       nodes {
         id
         data {
