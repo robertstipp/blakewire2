@@ -27,8 +27,8 @@ const NewHits = connectHits(({ hits }) => {
 
     return (
       <article key={objectID}>
-        <h4>Product Name{Name}</h4>
-        <h5>Table {table}</h5>
+        <h4>{Name}</h4>
+        <h5>{table}</h5>
         {/* <p>{Description}</p> */}
       </article>
     )

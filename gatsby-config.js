@@ -37,7 +37,7 @@ module.exports = {
       resolve: `gatsby-source-airtable`,
       options: {
         apiKey: process.env.GATSBY_AIRTABLE_API,
-        concurrency: 5,
+        concurrency: 8,
         tables: [
           {
             baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
@@ -62,6 +62,21 @@ module.exports = {
           {
             baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
             tableName: `M81822`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `Databus Cables`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `Un-insulated Buss Wire`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `Braiding`,
             mapping: { image: `fileNode` },
           },
         ],
