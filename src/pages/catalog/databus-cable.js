@@ -1,6 +1,6 @@
 import React from "react"
 
-import DataBusCable from "../../components/Products/databusCable/databusCable"
+import DataBusCable from "../../components/Products/databusCable/DataBusCable"
 import { Layout } from "../../components"
 
 const DatabusCable = () => {
