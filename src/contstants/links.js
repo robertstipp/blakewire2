@@ -48,12 +48,12 @@ export default [
   {
     page: "catalog",
     label: "Un-Insulated Buss Wire",
-    url: `/catalog/un-insulated-buss-wire/`,
+    url: `/catalog/un-insulated-bus-wire/`,
   },
   {
     page: "catalog",
     label: "Braiding",
-    url: `/catalog/un-insulated-buss-wire/`,
+    url: `/catalog/braiding`,
   },
   {
     page: "custom",
