@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import slugify from "slugify"
+import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Title from "./Title"
 import {
@@ -24,11 +26,12 @@ const searchClient = algoliasearch(
 const NewHits = connectHits(({ hits }) => {
   return hits.map(item => {
     const { objectID, Name, Description, table } = item
-
+    const nameSlug = slugify(Name, { lower: true })
     return (
       <article key={objectID}>
         <h4>{Name}</h4>
         <h5>{table}</h5>
+        <Link to={`/${nameSlug}`}>{Name}</Link>
         {/* <p>{Description}</p> */}
       </article>
     )

@@ -23,17 +23,17 @@ export default [
   {
     page: "catalog",
     label: "MIL Spec Wire",
-    url: `/catalog`,
+    url: `/catalog/mil-spec-wire/`,
   },
   {
     page: "catalog",
     label: "MIL Spec Cable",
-    url: `/catalog`,
+    url: `/catalog/m22759/`,
   },
   {
     page: "catalog",
-    label: "Coaxial Cable",
-    url: `/catalog`,
+    label: "Databus Cable",
+    url: `/catalog/databus-cables/`,
   },
   {
     page: "catalog",
@@ -42,8 +42,8 @@ export default [
   },
   {
     page: "catalog",
-    label: "Cord Products",
-    url: `/catalog`,
+    label: "Tubing",
+    url: `/catalog/tubing/`,
   },
   {
     page: "catalog",
@@ -52,13 +52,13 @@ export default [
   },
   {
     page: "catalog",
-    label: "Wire Management Products",
-    url: `/catalog`,
+    label: "Un-Insulated Buss Wire",
+    url: `/catalog/un-insulated-buss-wire/`,
   },
   {
     page: "catalog",
-    label: "Braid",
-    url: `/catalog`,
+    label: "Braiding",
+    url: `/catalog/un-insulated-buss-wire/`,
   },
   {
     page: "custom",

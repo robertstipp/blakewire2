@@ -1,37 +1,35 @@
-// const path = require("path")
-// const slugify = require("slugify")
-// exports.createPages = async ({ graphql, actions }) => {
-//   const { createPage } = actions
-
-//   const result = await graphql(`
-//     query GetTables {
-//       allAirtable {
-//         distinct(field: table)
-//       }
-//     }
-//   `)
-
-//   result.data.allContentfulWorkout.nodes.forEach(workout => {
-//     workout.content.tags.forEach(tag => {
-//       const tagSlug = slugify(tag, { lower: true })
-//       createPage({
-//         path: `/tags/${tagSlug}`,
-//         component: path.resolve(`src/templates/tag-template.js`),
-//         context: {
-//           tag: tag,
-//         },
-//       })
-//     })
-//   })
-// }
-
-//  result.data.allAirtable.forEach((node) => {
-//     createPage({
-//       path: NODE_SLUG,
-//       component: templatePath,
-//       context: {
-//         slug: NODE_SLUG,
-//       },
-//     })
-//   })
-// }
+const path = require(`path`)
+const slugify = require("slugify")
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+  return new Promise(async resolve => {
+    const result = await graphql(`
+      {
+        allAirtable {
+          edges {
+            node {
+              id
+              table
+              data {
+                Name
+              }
+            }
+          }
+        }
+      }
+    `)
+    // For each path, create page and choose a template.
+    // values in context Object are available in that page's query
+    result.data.allAirtable.edges.forEach(({ node }) => {
+      const nameSlug = slugify(node.data.Name, { lower: true })
+      createPage({
+        path: `/${nameSlug}`,
+        component: path.resolve(`./src/template/product-template.js`),
+        context: {
+          Name: node.data.Name,
+        },
+      })
+    })
+    resolve()
+  })
+}

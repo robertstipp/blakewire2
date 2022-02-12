@@ -84,6 +84,11 @@ module.exports = {
             tableName: `Tubing`,
             mapping: { image: `fileNode` },
           },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `MIL-DTL-16878/1 TYPE B`,
+            mapping: { image: `fileNode` },
+          },
         ],
       },
     },

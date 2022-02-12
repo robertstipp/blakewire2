@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { Layout, Algolia } from "../components"
+import { Layout, Algolia } from "../../components"
 
 const ProductTemplate = ({ data }) => {
   const { table } = data.airtable
