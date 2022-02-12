@@ -28,17 +28,12 @@ export default [
   {
     page: "catalog",
     label: "MIL Spec Cable",
-    url: `/catalog/m22759/`,
+    url: `/catalog/mil-spec-cable/`,
   },
   {
     page: "catalog",
     label: "Databus Cable",
-    url: `/catalog/databus-cables/`,
-  },
-  {
-    page: "catalog",
-    label: "Databus Cable",
-    url: `/catalog`,
+    url: `/catalog/databus-cable/`,
   },
   {
     page: "catalog",
