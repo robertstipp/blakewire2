@@ -1,5 +1,5 @@
 const path = require(`path`)
-const { monitorEventLoopDelay } = require("perf_hooks")
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return new Promise(async resolve => {
@@ -38,8 +38,28 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `)
+
+    const result3 = await graphql(`
+      {
+        allAirtable(
+          filter: {
+            table: { eq: "Product Table" }
+            data: { Product: { eq: "Cable" } }
+          }
+        ) {
+          nodes {
+            id
+            data {
+              Chart
+            }
+          }
+        }
+      }
+    `)
+
     const wireTemplate = path.resolve(`./src/template/wireTemplate.js`)
     const ropeTemplate = path.resolve(`./src/template/ropeTemplate.js`)
+    const cableTemplate = path.resolve(`./src/template/cableTemplate.js`)
 
     result1.data.allAirtable.nodes.forEach(node => {
       createPage({
@@ -57,6 +77,18 @@ exports.createPages = ({ graphql, actions }) => {
       createPage({
         path: `/wire/${node.id}`,
         component: wireTemplate,
+        context: {
+          id: node.id,
+          ID: node.id,
+          Chart: node.data.Chart,
+        },
+      })
+    })
+
+    result3.data.allAirtable.nodes.forEach(node => {
+      createPage({
+        path: `/cable/${node.id}`,
+        component: cableTemplate,
         context: {
           id: node.id,
           ID: node.id,

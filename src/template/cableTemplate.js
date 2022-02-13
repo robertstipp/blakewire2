@@ -4,7 +4,7 @@ import { Layout } from "../components"
 import styled from "styled-components"
 import Title from "../components/Title"
 
-const RopeTemplate = ({ data }) => {
+const CableTemplate = ({ data }) => {
   const {
     allAirtable: { nodes: products },
   } = data
@@ -52,7 +52,7 @@ const RopeTemplate = ({ data }) => {
 }
 
 export const query = graphql`
-  query ChartRopeQuery($Chart: String) {
+  query ChartCableQuery($Chart: String) {
     allAirtable(filter: { table: { eq: $Chart } }) {
       nodes {
         id
@@ -96,4 +96,4 @@ const Wrapper = styled.article`
   }
 `
 
-export default RopeTemplate
+export default CableTemplate
