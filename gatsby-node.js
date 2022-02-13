@@ -1,4 +1,5 @@
 const path = require(`path`)
+const { monitorEventLoopDelay } = require("perf_hooks")
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return new Promise(async resolve => {
@@ -12,6 +13,9 @@ exports.createPages = ({ graphql, actions }) => {
         ) {
           nodes {
             id
+            data {
+              Chart
+            }
           }
         }
       }
@@ -27,6 +31,9 @@ exports.createPages = ({ graphql, actions }) => {
         ) {
           nodes {
             id
+            data {
+              Chart
+            }
           }
         }
       }
@@ -40,6 +47,8 @@ exports.createPages = ({ graphql, actions }) => {
         component: ropeTemplate,
         context: {
           id: node.id,
+          ID: node.id,
+          Chart: node.data.Chart,
         },
       })
     })
@@ -50,6 +59,8 @@ exports.createPages = ({ graphql, actions }) => {
         component: wireTemplate,
         context: {
           id: node.id,
+          ID: node.id,
+          Chart: node.data.Chart,
         },
       })
     })
