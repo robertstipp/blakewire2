@@ -32,6 +32,7 @@ export const query = graphql`
           Temperature
           AWG_Gauge
           Type
+          path
         }
       }
     }

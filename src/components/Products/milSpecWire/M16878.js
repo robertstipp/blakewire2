@@ -1,23 +1,101 @@
 import React from "react"
+import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
+import Title from "../../Title"
+import { Link } from "gatsby"
 
-const M16878 = ({ products }) => {
+const M16878 = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allAirtable(filter: { table: { eq: "M16878" } }) {
+        nodes {
+          data {
+            Voltage
+            Type
+            Temperature
+            Name
+            Insulation
+            Description
+            Conductor
+            AWG_Gauge
+            path
+          }
+        }
+      }
+    }
+  `)
+
+  const {
+    allAirtable: { nodes: products },
+  } = data
+  console.log(products)
   return (
-    <div>
-      <h1>M16878</h1>
-      {products.map(item => {
-        const { id } = item
-        const { Name, Type, Insulation, Voltage, Temperature, AWG_Gauge } =
-          item.data
-        return (
-          <div key={id}>
-            <h3>
-              {Name} {Type} {Insulation} {Voltage} {Temperature} {AWG_Gauge}
-            </h3>
-          </div>
-        )
-      })}
-    </div>
+    <Wrapper>
+      <Title title="M16878" />
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Insulation</th>
+          <th>Voltage</th>
+          <th>Temperature</th>
+          <th>AWG Gauge</th>
+        </tr>
+        {products.map(item => {
+          const { id } = item
+          const {
+            Name,
+            Type,
+            Insulation,
+            Voltage,
+            Temperature,
+            AWG_Gauge,
+            path,
+          } = item.data
+          return (
+            <tr key={id}>
+              <td>
+                <Link to={path} replace>
+                  {Name}
+                </Link>
+              </td>
+              <td>{Type}</td>
+              <td>{Insulation}</td>
+              <td>{Voltage}</td>
+              <td>{Temperature}</td>
+              <td>{AWG_Gauge}</td>
+            </tr>
+          )
+        })}
+      </table>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.article`
+  margin: auto;
+  align-items: center;
+  width: 90vw;
+  table {
+    margin: auto;
+    border-collapse: collapse;
+    td,
+    th {
+      border: 2px solid #ddd;
+      padding: 0.2rem;
+      text-align: center;
+    }
+    tr:nth-child(even) {
+      background-color: var(--clr-grey-10);
+    }
+    tr:hover {
+      background-color: var(--clr-primary-9);
+      cursor: pointer;
+    }
+    th {
+      background-color: var(--clr-primary-10);
+    }
+  }
+`
 
 export default M16878

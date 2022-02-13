@@ -26,12 +26,12 @@ const searchClient = algoliasearch(
 const NewHits = connectHits(({ hits }) => {
   return hits.map(item => {
     const { objectID, Name, Description, table } = item
-    const nameSlug = slugify(Name, { lower: true })
+    // const nameSlug = slugify(Name, { lower: true })
     return (
       <article key={objectID}>
         <h4>{Name}</h4>
         <h5>{table}</h5>
-        <Link to={`/${nameSlug}`}>{Name}</Link>
+        {/* <Link to={`/${nameSlug}`}>{Name}</Link> */}
         {/* <p>{Description}</p> */}
       </article>
     )
