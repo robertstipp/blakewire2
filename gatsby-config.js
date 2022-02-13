@@ -37,7 +37,7 @@ module.exports = {
       resolve: `gatsby-source-airtable`,
       options: {
         apiKey: process.env.GATSBY_AIRTABLE_API,
-        concurrency: 12,
+        concurrency: 13,
         tables: [
           {
             baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
@@ -102,6 +102,16 @@ module.exports = {
           {
             baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
             tableName: `M16878/4 TYPE E`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `Test`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `Product Table`,
             mapping: { image: `fileNode` },
           },
         ],

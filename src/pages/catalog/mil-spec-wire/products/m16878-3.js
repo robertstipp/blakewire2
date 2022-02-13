@@ -1,14 +1,38 @@
 import React from "react"
-import { graphql } from "gatsby"
-import { Layout } from "../components"
 import styled from "styled-components"
+import { Layout } from "../../../../components"
+import { useStaticQuery, graphql } from "gatsby"
+import Title from "../../../../components/Title"
 
-const ProductTemplate = ({ data }) => {
-  const products = data.allAirtable.nodes
-  console.log(products)
+const M16878_3 = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allAirtable(
+        filter: { table: { eq: "Test" }, data: { Type: { eq: "D" } } }
+      ) {
+        nodes {
+          data {
+            Blake_Part_Number
+            AWG
+            Stranding
+            OD
+            Thickness
+            LBS_MFT
+          }
+        }
+      }
+    }
+  `)
+
+  const {
+    allAirtable: { nodes: products },
+  } = data
+
   return (
     <Layout>
       <Wrapper>
+        <h1>success</h1>
+        <Title title="MIL-DTL-16878/3 TYPE D" />
         <table>
           <tr>
             <th>Blake Part Number</th>
@@ -18,8 +42,8 @@ const ProductTemplate = ({ data }) => {
             <th>Nom. Insulation Thick</th>
             <th>LBS/Mft</th>
           </tr>
-          {products.map(product => {
-            const { data, id } = product
+          {products.map(item => {
+            const { id } = item
             const {
               Blake_Part_Number,
               AWG,
@@ -27,7 +51,7 @@ const ProductTemplate = ({ data }) => {
               OD,
               Thickness,
               LBS_MFT,
-            } = data
+            } = item.data
             return (
               <tr key={id}>
                 <td>{Blake_Part_Number}</td>
@@ -44,26 +68,6 @@ const ProductTemplate = ({ data }) => {
     </Layout>
   )
 }
-
-export const query = graphql`
-  query GetProduct($Type: String) {
-    allAirtable(
-      filter: { table: { eq: "Test" }, data: { Type: { eq: $Type } } }
-    ) {
-      nodes {
-        data {
-          Blake_Part_Number
-          AWG
-          Stranding
-          OD
-          Thickness
-          LBS_MFT
-        }
-        id
-      }
-    }
-  }
-`
 
 const Wrapper = styled.article`
   margin: auto;
@@ -91,4 +95,5 @@ const Wrapper = styled.article`
     }
   }
 `
-export default ProductTemplate
+
+export default M16878_3

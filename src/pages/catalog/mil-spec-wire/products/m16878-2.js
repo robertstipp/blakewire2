@@ -7,7 +7,9 @@ import Title from "../../../../components/Title"
 const M16878_2 = () => {
   const data = useStaticQuery(graphql`
     {
-      allAirtable(filter: { table: { eq: "MIL-DTL-16878/2 TYPE C" } }) {
+      allAirtable(
+        filter: { table: { eq: "Test" }, data: { Type: { eq: "C" } } }
+      ) {
         nodes {
           data {
             Blake_Part_Number
@@ -29,6 +31,7 @@ const M16878_2 = () => {
   return (
     <Layout>
       <Wrapper>
+        <h1>success</h1>
         <Title title="MIL-DTL-16878/2 TYPE C" />
         <table>
           <tr>
