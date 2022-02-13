@@ -55,9 +55,7 @@ const M16878 = () => {
           return (
             <tr key={id}>
               <td>
-                <Link to={path} replace>
-                  {Name}
-                </Link>
+                <Link to={path}>{Name}</Link>
               </td>
               <td>{Type}</td>
               <td>{Insulation}</td>
@@ -75,7 +73,7 @@ const M16878 = () => {
 const Wrapper = styled.article`
   margin: auto;
   align-items: center;
-  width: 90vw;
+  width: 80vw;
   table {
     margin: auto;
     border-collapse: collapse;
