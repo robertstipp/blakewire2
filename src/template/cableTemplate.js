@@ -19,9 +19,9 @@ const CableTemplate = ({ data }) => {
             <th>Blake Part Number</th>
             <th>AWG</th>
             <th>Stranding</th>
-            <th>Nom. O.D in.</th>
+            <th>Nom OD</th>
             <th>Nom. Insulation Thick</th>
-            <th>LBS/Mft</th>
+            <th>Jacket Thickness</th>
           </tr>
           {products.map(item => {
             const { id } = item
@@ -29,18 +29,18 @@ const CableTemplate = ({ data }) => {
               Blake_Part_Number,
               AWG,
               Stranding,
-              OD,
-              Thickness,
-              LBS_MFT,
+              NomOD,
+              NomInThickness,
+              JacketThickness,
             } = item.data
             return (
               <tr key={id}>
                 <td>{Blake_Part_Number}</td>
                 <td>{AWG}</td>
                 <td>{Stranding}</td>
-                <td>{OD}</td>
-                <td>{Thickness}</td>
-                <td>{LBS_MFT}</td>
+                <td>{NomOD}</td>
+                <td>{NomInThickness}</td>
+                <td>{JacketThickness}</td>
               </tr>
             )
           })}
@@ -59,9 +59,9 @@ export const query = graphql`
           Blake_Part_Number
           AWG
           Stranding
-          OD
-          Thickness
-          LBS_MFT
+          NomOD
+          NomInThickness
+          JacketThickness
         }
         table
       }

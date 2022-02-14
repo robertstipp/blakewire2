@@ -1,6 +1,3 @@
-// import rohs from "../images/rohs-logo.png"
-// import iso from "../images/iso-logo.jpeg"
-// import minerals from "../images/AS9100D-logo.png"
 export default [
   {
     id: 1,

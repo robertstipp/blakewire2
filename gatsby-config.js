@@ -131,6 +131,11 @@ module.exports = {
           },
           {
             baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `MIL-DTL-16878/19`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
             tableName: `Test`,
             mapping: { image: `fileNode` },
           },
