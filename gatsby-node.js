@@ -73,11 +73,120 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `)
+    const result5 = await graphql(`
+      {
+        allAirtable(
+          filter: {
+            table: { eq: "Product Table" }
+            data: { Product: { eq: "TemplateE" } }
+          }
+        ) {
+          nodes {
+            id
+            data {
+              Chart
+            }
+          }
+        }
+      }
+    `)
+    const result6 = await graphql(`
+      {
+        allAirtable(
+          filter: {
+            table: { eq: "Product Table" }
+            data: { Product: { eq: "TemplateF" } }
+          }
+        ) {
+          nodes {
+            id
+            data {
+              Chart
+            }
+          }
+        }
+      }
+    `)
+
+    const result7 = await graphql(`
+      {
+        allAirtable(
+          filter: {
+            table: { eq: "Product Table" }
+            data: { Product: { eq: "TemplateG" } }
+          }
+        ) {
+          nodes {
+            id
+            data {
+              Chart
+            }
+          }
+        }
+      }
+    `)
+    const result8 = await graphql(`
+      {
+        allAirtable(
+          filter: {
+            table: { eq: "Product Table" }
+            data: { Product: { eq: "TemplateH" } }
+          }
+        ) {
+          nodes {
+            id
+            data {
+              Chart
+            }
+          }
+        }
+      }
+    `)
+    const result9 = await graphql(`
+      {
+        allAirtable(
+          filter: {
+            table: { eq: "Product Table" }
+            data: { Product: { eq: "TemplateI" } }
+          }
+        ) {
+          nodes {
+            id
+            data {
+              Chart
+            }
+          }
+        }
+      }
+    `)
+    const result10 = await graphql(`
+      {
+        allAirtable(
+          filter: {
+            table: { eq: "Product Table" }
+            data: { Product: { eq: "TemplateJ" } }
+          }
+        ) {
+          nodes {
+            id
+            data {
+              Chart
+            }
+          }
+        }
+      }
+    `)
 
     const wireTemplate = path.resolve(`./src/template/wireTemplate.js`)
     const ropeTemplate = path.resolve(`./src/template/ropeTemplate.js`)
     const cableTemplate = path.resolve(`./src/template/cableTemplate.js`)
     const tableTemplateD = path.resolve(`./src/template/tableTemplateD.js`)
+    const tableTemplateE = path.resolve(`./src/template/tableTemplateE.js`)
+    const tableTemplateF = path.resolve(`./src/template/tableTemplateF.js`)
+    const tableTemplateG = path.resolve(`./src/template/tableTemplateG.js`)
+    const tableTemplateH = path.resolve(`./src/template/tableTemplateH.js`)
+    const tableTemplateI = path.resolve(`./src/template/tableTemplateI.js`)
+    const tableTemplateJ = path.resolve(`./src/template/tableTemplateJ.js`)
 
     result1.data.allAirtable.nodes.forEach(node => {
       createPage({
@@ -119,6 +228,72 @@ exports.createPages = ({ graphql, actions }) => {
       createPage({
         path: `/d/${node.id}`,
         component: tableTemplateD,
+        context: {
+          id: node.id,
+          ID: node.id,
+          Chart: node.data.Chart,
+        },
+      })
+    })
+    result5.data.allAirtable.nodes.forEach(node => {
+      createPage({
+        path: `/E/${node.id}`,
+        component: tableTemplateE,
+        context: {
+          id: node.id,
+          ID: node.id,
+          Chart: node.data.Chart,
+        },
+      })
+    })
+    result6.data.allAirtable.nodes.forEach(node => {
+      createPage({
+        path: `/F/${node.id}`,
+        component: tableTemplateF,
+        context: {
+          id: node.id,
+          ID: node.id,
+          Chart: node.data.Chart,
+        },
+      })
+    })
+    result7.data.allAirtable.nodes.forEach(node => {
+      createPage({
+        path: `/G/${node.id}`,
+        component: tableTemplateG,
+        context: {
+          id: node.id,
+          ID: node.id,
+          Chart: node.data.Chart,
+        },
+      })
+    })
+    result8.data.allAirtable.nodes.forEach(node => {
+      createPage({
+        path: `/H/${node.id}`,
+        component: tableTemplateH,
+        context: {
+          id: node.id,
+          ID: node.id,
+          Chart: node.data.Chart,
+        },
+      })
+    })
+    result9.data.allAirtable.nodes.forEach(node => {
+      createPage({
+        path: `/I/${node.id}`,
+        component: tableTemplateI,
+        context: {
+          id: node.id,
+          ID: node.id,
+          Chart: node.data.Chart,
+        },
+      })
+    })
+    result10.data.allAirtable.nodes.forEach(node => {
+      createPage({
+        path: `/I/${node.id}`,
+        component: tableTemplateJ,
         context: {
           id: node.id,
           ID: node.id,
