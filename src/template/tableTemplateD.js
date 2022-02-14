@@ -77,6 +77,7 @@ const Wrapper = styled.article`
   width: 90vw;
   table {
     margin: auto;
+    margin-bottom: 2rem;
     border-collapse: collapse;
     td,
     th {

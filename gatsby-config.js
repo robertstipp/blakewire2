@@ -361,6 +361,31 @@ module.exports = {
           },
           {
             baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M81044/9`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M81044/12`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M81044/13`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M81822/6`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M81822/13`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
             tableName: `Test`,
             mapping: { image: `fileNode` },
           },
