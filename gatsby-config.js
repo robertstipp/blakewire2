@@ -37,7 +37,7 @@ module.exports = {
       resolve: `gatsby-source-airtable`,
       options: {
         apiKey: process.env.GATSBY_AIRTABLE_API,
-        concurrency: 20,
+        concurrency: 30,
         tables: [
           {
             baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
@@ -132,6 +132,231 @@ module.exports = {
           {
             baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
             tableName: `MIL-DTL-16878/19`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/5`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/6`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/7`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/8`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/9`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/10`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/11`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/12`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/16`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/18`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/32`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/33`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/34`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/35`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/41`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/42`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/43`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/44`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/45`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/46`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/80`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/81`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/82`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/83`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/84`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/85`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/86`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/87`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/88`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/89`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/90`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/91`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/92`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/180`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/181`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/183`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/184`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/185`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/186`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/187`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/188`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/189`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/190`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/191`,
+            mapping: { image: `fileNode` },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `M22759/192`,
             mapping: { image: `fileNode` },
           },
           {

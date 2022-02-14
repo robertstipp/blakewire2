@@ -56,10 +56,28 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `)
+    const result4 = await graphql(`
+      {
+        allAirtable(
+          filter: {
+            table: { eq: "Product Table" }
+            data: { Product: { eq: "TemplateD" } }
+          }
+        ) {
+          nodes {
+            id
+            data {
+              Chart
+            }
+          }
+        }
+      }
+    `)
 
     const wireTemplate = path.resolve(`./src/template/wireTemplate.js`)
     const ropeTemplate = path.resolve(`./src/template/ropeTemplate.js`)
     const cableTemplate = path.resolve(`./src/template/cableTemplate.js`)
+    const tableTemplateD = path.resolve(`./src/template/tableTemplateD.js`)
 
     result1.data.allAirtable.nodes.forEach(node => {
       createPage({
@@ -96,6 +114,19 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
+
+    result4.data.allAirtable.nodes.forEach(node => {
+      createPage({
+        path: `/d/${node.id}`,
+        component: tableTemplateD,
+        context: {
+          id: node.id,
+          ID: node.id,
+          Chart: node.data.Chart,
+        },
+      })
+    })
+
     resolve()
   })
 }
