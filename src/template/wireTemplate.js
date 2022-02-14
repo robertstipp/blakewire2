@@ -8,13 +8,13 @@ const WireTemplate = ({ data }) => {
   const {
     allAirtable: { nodes: products },
   } = data
-  console.log(products)
+  const title = data.allAirtable.distinct[0]
 
   return (
     <Layout>
       <Wrapper>
         <h1>success</h1>
-        <Title title="Test" />
+        <Title title={title} />
         <table>
           <tr>
             <th>Blake Part Number</th>
@@ -64,7 +64,9 @@ export const query = graphql`
           Thickness
           LBS_MFT
         }
+        table
       }
+      distinct(field: table)
     }
   }
 `

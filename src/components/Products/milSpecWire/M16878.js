@@ -28,7 +28,7 @@ const M16878 = () => {
   const {
     allAirtable: { nodes: products },
   } = data
-  console.log(products)
+
   return (
     <Wrapper>
       <Title title="M16878" />

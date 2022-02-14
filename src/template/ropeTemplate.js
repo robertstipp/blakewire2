@@ -8,40 +8,33 @@ const RopeTemplate = ({ data }) => {
   const {
     allAirtable: { nodes: products },
   } = data
-  console.log(products)
-
+  const title = data.allAirtable.distinct[0]
   return (
     <Layout>
       <Wrapper>
         <h1>success</h1>
-        <Title title="Test" />
+        <Title title={title} />
         <table>
           <tr>
             <th>Blake Part Number</th>
             <th>AWG</th>
             <th>Stranding</th>
-            <th>Nom. O.D in.</th>
-            <th>Nom. Insulation Thick</th>
-            <th>LBS/Mft</th>
+            <th>Min OD</th>
+            <th>Max OD</th>
+            <th>Nom. OD</th>
           </tr>
           {products.map(item => {
             const { id } = item
-            const {
-              Blake_Part_Number,
-              AWG,
-              Stranding,
-              OD,
-              Thickness,
-              LBS_MFT,
-            } = item.data
+            const { Blake_Part_Number, AWG, Stranding, MaxOD, MinOD, NomOD } =
+              item.data
             return (
               <tr key={id}>
                 <td>{Blake_Part_Number}</td>
                 <td>{AWG}</td>
                 <td>{Stranding}</td>
-                <td>{OD}</td>
-                <td>{Thickness}</td>
-                <td>{LBS_MFT}</td>
+                <td>{MinOD}</td>
+                <td>{MaxOD}</td>
+                <td>{NomOD}</td>
               </tr>
             )
           })}
@@ -60,11 +53,13 @@ export const query = graphql`
           Blake_Part_Number
           AWG
           Stranding
-          OD
-          Thickness
-          LBS_MFT
+          MaxOD
+          MinOD
+          NomOD
         }
+        table
       }
+      distinct(field: table)
     }
   }
 `
