@@ -501,7 +501,7 @@ module.exports = {
           },
           {
             baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
-            tableName: `MIL-I-3190/5`,
+            tableName: `MIL-I-3190/6`,
             mapping: { image: `fileNode` },
           },
           {
