@@ -32,6 +32,7 @@ const Wrapper = styled.section`
   .img {
     height: 100%;
   }
+
   .info {
     position: absolute;
     top: 0;

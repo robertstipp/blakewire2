@@ -1,4 +1,5 @@
 const path = require(`path`)
+const slugify = require("slugify")
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -297,8 +298,9 @@ exports.createPages = ({ graphql, actions }) => {
     const tableTemplateP = path.resolve(`./src/template/tableTemplateP.js`)
 
     result1.data.allAirtable.nodes.forEach(node => {
+      const nameSlug = slugify(node.data.Chart, { lower: true })
       createPage({
-        path: `/rope/${node.id}`,
+        path: `/table/${nameSlug}`,
         component: ropeTemplate,
         context: {
           id: node.id,
@@ -309,8 +311,9 @@ exports.createPages = ({ graphql, actions }) => {
     })
 
     result2.data.allAirtable.nodes.forEach(node => {
+      const nameSlug = slugify(node.data.Chart, { lower: true })
       createPage({
-        path: `/wire/${node.id}`,
+        path: `/table/${nameSlug}`,
         component: wireTemplate,
         context: {
           id: node.id,
@@ -321,8 +324,9 @@ exports.createPages = ({ graphql, actions }) => {
     })
 
     result3.data.allAirtable.nodes.forEach(node => {
+      const nameSlug = slugify(node.data.Chart, { lower: true })
       createPage({
-        path: `/cable/${node.id}`,
+        path: `/table/${nameSlug}`,
         component: cableTemplate,
         context: {
           id: node.id,
@@ -333,8 +337,9 @@ exports.createPages = ({ graphql, actions }) => {
     })
 
     result4.data.allAirtable.nodes.forEach(node => {
+      const nameSlug = slugify(node.data.Chart, { lower: true })
       createPage({
-        path: `/d/${node.id}`,
+        path: `/table/${nameSlug}`,
         component: tableTemplateD,
         context: {
           id: node.id,
@@ -344,8 +349,9 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
     result5.data.allAirtable.nodes.forEach(node => {
+      const nameSlug = slugify(node.data.Chart, { lower: true })
       createPage({
-        path: `/E/${node.id}`,
+        path: `/table/${nameSlug}`,
         component: tableTemplateE,
         context: {
           id: node.id,
@@ -355,8 +361,9 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
     result6.data.allAirtable.nodes.forEach(node => {
+      const nameSlug = slugify(node.data.Chart, { lower: true })
       createPage({
-        path: `/F/${node.id}`,
+        path: `/table/${nameSlug}`,
         component: tableTemplateF,
         context: {
           id: node.id,
@@ -366,8 +373,9 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
     result7.data.allAirtable.nodes.forEach(node => {
+      const nameSlug = slugify(node.data.Chart, { lower: true })
       createPage({
-        path: `/G/${node.id}`,
+        path: `/table/${nameSlug}`,
         component: tableTemplateG,
         context: {
           id: node.id,
@@ -377,8 +385,9 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
     result8.data.allAirtable.nodes.forEach(node => {
+      const nameSlug = slugify(node.data.Chart, { lower: true })
       createPage({
-        path: `/H/${node.id}`,
+        path: `/table/${nameSlug}`,
         component: tableTemplateH,
         context: {
           id: node.id,
@@ -388,8 +397,9 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
     result9.data.allAirtable.nodes.forEach(node => {
+      const nameSlug = slugify(node.data.Chart, { lower: true })
       createPage({
-        path: `/I/${node.id}`,
+        path: `/table/${nameSlug}`,
         component: tableTemplateI,
         context: {
           id: node.id,
@@ -399,8 +409,9 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
     result10.data.allAirtable.nodes.forEach(node => {
+      const nameSlug = slugify(node.data.Chart, { lower: true })
       createPage({
-        path: `/J/${node.id}`,
+        path: `/table/${nameSlug}`,
         component: tableTemplateJ,
         context: {
           id: node.id,
@@ -410,8 +421,9 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
     result11.data.allAirtable.nodes.forEach(node => {
+      const nameSlug = slugify(node.data.Chart, { lower: true })
       createPage({
-        path: `/K/${node.id}`,
+        path: `/table/${nameSlug}`,
         component: tableTemplateK,
         context: {
           id: node.id,
@@ -421,8 +433,9 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
     result12.data.allAirtable.nodes.forEach(node => {
+      const nameSlug = slugify(node.data.Chart, { lower: true })
       createPage({
-        path: `/L/${node.id}`,
+        path: `/table/${nameSlug}`,
         component: tableTemplateL,
         context: {
           id: node.id,
@@ -432,8 +445,9 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
     result13.data.allAirtable.nodes.forEach(node => {
+      const nameSlug = slugify(node.data.Chart, { lower: true })
       createPage({
-        path: `/M/${node.id}`,
+        path: `/table/${nameSlug}`,
         component: tableTemplateM,
         context: {
           id: node.id,
@@ -443,8 +457,9 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
     result14.data.allAirtable.nodes.forEach(node => {
+      const nameSlug = slugify(node.data.Chart, { lower: true })
       createPage({
-        path: `/N/${node.id}`,
+        path: `/table/${nameSlug}`,
         component: tableTemplateN,
         context: {
           id: node.id,
@@ -454,8 +469,9 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
     result15.data.allAirtable.nodes.forEach(node => {
+      const nameSlug = slugify(node.data.Chart, { lower: true })
       createPage({
-        path: `/O/${node.id}`,
+        path: `/table/${nameSlug}`,
         component: tableTemplateO,
         context: {
           id: node.id,
@@ -465,8 +481,9 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
     result16.data.allAirtable.nodes.forEach(node => {
+      const nameSlug = slugify(node.data.Chart, { lower: true })
       createPage({
-        path: `/P/${node.id}`,
+        path: `/table/${nameSlug}`,
         component: tableTemplateP,
         context: {
           id: node.id,

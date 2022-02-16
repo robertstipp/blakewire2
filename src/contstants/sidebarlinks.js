@@ -32,11 +32,11 @@ export default [
   {
     page: "testTabe",
     label: "Test Tabel2",
-    url: `/wire/49561431-ad0e-5cc5-a8bf-200ca630d102`,
+    url: `/N/07394018-7ddf-5ae9-bb14-216d946597ed`,
   },
   {
     page: "testTabe",
     label: "Test Tabel3",
-    url: `/K/ae665d98-d2d4-5689-bbf7-62f60946af2a`,
+    url: `/K/af5e9816-0bcb-5772-8f31-24369b8c98a6`,
   },
 ]
