@@ -11,11 +11,6 @@ export default [
     url: `/contact`,
   },
   {
-    page: "about",
-    label: "our history",
-    url: `/about`,
-  },
-  {
     page: "quality",
     label: "quality",
     url: `/quality`,

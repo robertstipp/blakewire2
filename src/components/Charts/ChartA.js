@@ -1,29 +1,38 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 const ChartA = () => {
   return (
     <Wrapper>
       <div className="container">
-        <h5 className="info">Wire Cable</h5>
-        <StaticImage src="../../images/graphicA.jpg" className="card" />
+        <Link to="/catalog/mil-spec-wire/">
+          <h5 className="info">Wire Cable</h5>
+          <StaticImage src="../../images/graphicA.jpg" className="card" />
+        </Link>
       </div>
       <div className="container">
-        <h5 className="info">Braided Sleeve</h5>
-        <StaticImage src="../../images/graphicB.jpg" className="card" />
+        <Link to="/catalog/braiding/">
+          <h5 className="info">Braided Sleeve</h5>
+          <StaticImage src="../../images/graphicB.jpg" className="card" />
+        </Link>
       </div>
       <div className="container">
-        <h5 className="info">Red Cable</h5>
-        <StaticImage src="../../images/graphicC.jpg" className="card" />
+        <Link to="/catalog/mil-spec-cable/">
+          <h5 className="info">Red Cable</h5>
+          <StaticImage src="../../images/graphicC.jpg" className="card" />
+        </Link>
       </div>
       <div className="container">
         <h5 className="info">Fast Cable</h5>
         <StaticImage src="../../images/graphicD.jpg" className="card" />
       </div>
       <div className="container">
-        <h5 className="info">Super Fast Cable</h5>
-        <StaticImage src="../../images/graphicE.jpg" className="card" />
+        <Link to="/table/m22759183">
+          <h5 className="info">Super Fast Cable</h5>
+          <StaticImage src="../../images/graphicE.jpg" className="card" />
+        </Link>
       </div>
       <div className="container">
         <h5 className="info">Wire Cable</h5>
