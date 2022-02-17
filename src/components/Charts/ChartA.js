@@ -53,9 +53,19 @@ const Wrapper = styled.section`
   grid-gap: 1rem;
   padding: 2rem;
   grid-template-columns: 1fr;
+  .container {
+    border: 1px solid black;
+    border-radius: 0.2rem 0.2rem 0 0;
+  }
   .info {
-    position: absolute;
-    font-size: 1rem;
+    text-decoration: none;
+    background-color: var(--clr-primary-8);
+    color: var(--clr-black);
+    position: relative;
+    height: 4rem;
+    padding: 0 0 0.2rem 0.2rem;
+    border-radius: 0.2rem 0.2rem 0 0;
+    font-size: 3rem;
     visibility: visible;
   }
 
@@ -69,12 +79,13 @@ const Wrapper = styled.section`
         transition: all 0.2s cubic-bezier(0.79, 0.33, 0.14, 0.53);
       }
       .info {
-        display: flex;
         justify-content: center;
-        position: absolute;
+        position: relative;
         visibility: visible;
         font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
         font-size: 3rem;
+        text-align: center;
+        align-items: center;
         letter-spacing: 3px;
         color: black;
         transition: all 0.2s cubic-bezier(0.79, 0.33, 0.14, 0.53);
